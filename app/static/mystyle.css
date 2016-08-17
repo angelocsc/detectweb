@@ -1,0 +1,47 @@
+#headdiv{
+	margin:auto;
+	text-align: center;
+	width:80%;
+	height: 80px;
+	border-bottom: 10px black solid;
+	background-image: url("greenline2.jpg"); 
+	line-height: 80px;
+	position: relative;
+	font-weight: normal;
+	font-family: "新細明體";
+}
+
+#homebutton{
+	background-color: red;
+	color : white; 
+	text-align: center;
+	cursor: pointer;
+	font-size: 20px;
+	float: right;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 10px;
+	right: 15px;
+}
+
+#paradiv{
+	margin-left: auto;
+	margin-right: auto;
+	border:3px black solid;
+	width:80%;
+
+}
+
+h1 {
+	color :navy;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 50px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	letter-spacing: 3px;
+}
+
+body{
+	background-image:url("sky.jpg"); 
+	background-size:cover;
+}

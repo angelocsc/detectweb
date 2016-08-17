@@ -1,0 +1,53 @@
+from flask import render_template, send_from_directory,url_for, abort, request, make_response
+from app import app
+from array import *
+import subprocess
+import matplotlib
+#import threading
+#import uuid
+#import os
+#import sys
+versionNum = 0;
+@app.route("/simple.png")
+@app.route('/detect')
+def detect():
+	return render_template('index.html',title = 'Home')
+
+
+@app.route('/makepic')
+def makepic():
+	subprocess.call(["python","home/iii/python_sqlite/long/Final.py"])
+	return render_template('home.html')
+
+@app.route('/front.html')
+@app.route('/generate')
+def generate():
+	#memory = subprocess.Popen(["python","process.py"], stdout=subprocess.PIPE)
+	#out = subprocess.check_output(["python","subprocess.py"])
+	#out,error = memory.communicate()
+	#cache.clear();
+	global versionNum
+	versionNum += 1
+	"""out = 1;
+	out = subprocess.call(["python","simple.py"])
+	if out == 0:
+		return render_template('front.html',out = out,versionNum = versionNum)"""
+	return render_template('front.html',versionNum = versionNum)
+
+
+@app.route('/left')
+@app.route('/left.html')
+def left():
+	return render_template('left.html')
+
+@app.route('/home')
+def home():
+	return render_template('home.html')
+
+@app.route('/page1')
+def page1():
+	return render_template('page1.html')
+
+@app.route('/page2')
+def page2():
+	return render_template('page2.html')
